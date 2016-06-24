@@ -7,7 +7,7 @@ use OpsWay\Migration\Writer\WriterInterface;
 class Csv implements WriterInterface
 {
     protected $file;
-    protected $filename="data/export.csv";
+    protected $filename;
 
     public function __construct()
     {
@@ -19,8 +19,9 @@ class Csv implements WriterInterface
      *
      * @return bool
      */
-    public function write(array $item)
+    public function write(array $item, $filename="data/export.csv")
     {
+        $this->filename = $filename;
         if (!$this->file) {
             if (!($this->file = fopen($this->filename, 'w+'))) {
                 throw new \RuntimeException(sprintf('Can not create file "%s" for writing data.', $this->filename));

@@ -16,7 +16,7 @@ try {
     $processor = new ReadWriteProcessor(
         ReaderFactory::create($config['reader'], $config['params']),
         WriterFactory::create($config['writer'], $config['params']),
-        new ConsoleLogger()
+        new ConsoleLogger(true)
     );
     //Processing
     $processor->processing();
