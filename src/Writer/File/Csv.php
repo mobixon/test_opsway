@@ -7,7 +7,7 @@ use OpsWay\Migration\Writer\WriterInterface;
 class Csv implements WriterInterface
 {
     protected $file;
-    protected $filename;
+    protected $filename="data/export.csv";
 
     public function __construct()
     {
