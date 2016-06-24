@@ -1,0 +1,5 @@
+When ReaderWriterTrait is using in Reader or Writer Factory classes, it checks the existance of reader/writer className which was inputed by using cli or web.
+Processing function in ReadWriteProcessor class, starts and process migration, and log states and data using the logger class.
+ReaderFactory and WriterFactory create instance of inputed className, for using it by Processor.
+Product class is some example of reader class which reads data from sqlite db file test.db.
+ConsoleOutput,HTML,Stub,CSV classes are the examples of writers.
